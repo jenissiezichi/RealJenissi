@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #FFB000;
+    --color-text1: #E5E2E1;
+    --color-surface: #131313;
+    --color-surface-card: #201f1f;
+    --color-surface-low: #1c1b1b;
+    --color-border : rgba(255, 176, 0, 0.2);
+    --color-muted: #9f8e78;
+    --font-head: 'Orbitron', sans-serif;
+    --font-body: 'Share Tech Mono', monospace;
+}
