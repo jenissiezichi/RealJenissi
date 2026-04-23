@@ -11,3 +11,51 @@
     --font-head: 'Orbitron', sans-serif;
     --font-body: 'Share Tech Mono', monospace;
 }
+html{
+scroll-behavior: smooth;
+}
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes rotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.bg-ring {
+    position: fixed;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.bg-ring:nth-child(1) {
+    width: 500px;
+    height: 500px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    animation: rotate 20s linear infinite;
+}
+
+.bg-ring:nth-child(2) {
+    width: 750px;
+    height: 750px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    animation: rotate 30s linear infinite reverse;
+}
+
+.bg-ring:nth-child(3) {
+    width: 1000px;
+    height: 1000px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    animation: rotate 40s linear infinite;
+}

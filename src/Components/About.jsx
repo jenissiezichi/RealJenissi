@@ -14,11 +14,16 @@ gsap.registerPlugin(ScrollTrigger, SplitText, ScrambleTextPlugin);
 import one from './Por/j2.png'
 import two from './Por/3.png'
 import three from './Por/IMG-20260118-WA0330.jpg'
-import four from './Por/jenissi.png'
+import four from './Por/me.jpg'
 import five from './Por/20251130_115817.jpg'
 import six from './Por/20251223_154054.jpg'
+import sixx from './Por/1.png'
 import seven from './Por/Screenshot_20251109-163218_Gallery.jpg'
+import eight from './Por/p.png'
  const list=[
+     {
+         src: sixx , desc : 'Kicking Off.....',
+     },
     {
         src: one , desc : 'Lets Get Started',
     },
@@ -40,7 +45,10 @@ import seven from './Por/Screenshot_20251109-163218_Gallery.jpg'
     },
     {
         src: six, desc: 'My Musical Moments are Gold'
-    }
+    },
+     {
+         src: eight, desc: 'So Bye........😊'
+     }
 
 ];
 export default function About() {
@@ -72,6 +80,8 @@ function handleNext() {
             setIndex(0);
         }
 }
+
+
 let listedGallery = list[index];
  const Gallery=useRef(null);
     useEffect(()=>{
@@ -102,24 +112,27 @@ opacity:0,
             )
     },[index,showMore]);
 
- const aboutRef = useRef(null);
+
  useGSAP(()=>{
-     gsap.from('.about', {
-         scrollTrigger:{
-             trigger: aboutRef.current,
-             start : 'top 80%',
-             end : 'top 30%',
-             toggleActions: 'play none none reverse',
-         },
-    y:60,
-         duration:2,
-         opacity:0,
-         stagger:0.3,
-         ease:'power3.out',
+     const tl = gsap.timeline({
+             scrollTrigger:{
+                 trigger:'#about1',
+                 start: 'top 60%',
+                 end: 'bottom center',
+                 scrub:true,
+             }
+
+         })
+     tl.from('.about',{
+        x:300,
+         opacity: 0,
+         stagger: 0.2,
+         ease: 'power2.out',
      })
- },[])
+     })
+
     return(
-        <section className="px-6 md:px-20 py-24" ref={aboutRef}>
+        <section className="px-6 md:px-20 py-24" id="about1">
             <div className="flex items-center gap-4 mb-12">
                 <h2 className="text-white font-black text-2xl tracking-widest border-l-4 border-primary pl-4">ABOUT_ME</h2>
                 <div className="h-px grow bg-white/20"/>
@@ -129,7 +142,7 @@ opacity:0,
 <div className="grid grid-cols-1 gap-12 md:grid-cols-1 ">
    <div className="flex flex-col gap-6">
        <p className="about text-muted text-sm leading-relaxed max-w-xl">I'm Eziokwubundu Jenissi Ezichi
-           An aspiring Software Engineering Student at FUTO, Nigeria.
+           An aspiring Software Engineering Student at Federal University Of Technology Owerri (FUTO), Nigeria.
            Building interfaces that feels alive, One Component at a time.
        </p>
        <p className="about text-muted text-sm leading-relaxed max-w-xl">
@@ -147,15 +160,17 @@ opacity:0,
        <p className="about text-primary font-mono  text-xs tracking-widest">$ echo <span className="text-white">"Progress Over Comparison"</span></p>
 
 
-       <h3 ref={moreMe}className="font-mono"/>
+       <h3 ref={moreMe}className="font-mono min-h-[60px]"/>
        <button className=" w-40 border border-primary text-primary text-xs font-mono px-6 py-3 uppercase tracking-widest
                 hover:bg-primary hover:text-[#050505] transition-all duration-500 hover:font-black font-bold cursor-pointer"
 onClick={toggleShowMore}>{showMore ? 'HIDE Gallery':'SHOW Gallery'}</button>
      <div className="flex flex-col items-center gap-4 mb-12">
          {showMore &&
-             <button className="w-20 border border-primary text-primary text-xs font-mono px-6 py-3 uppercase tracking-widest
+
+                <button className="w-20 border border-primary text-primary text-xs font-mono px-6 py-3 uppercase tracking-widest
                 hover:bg-primary hover:text-[#050505] transition-all duration-500 hover:font-black font-bold cursor-pointer"
-                     onClick={handleNext}>Next</button>
+                        onClick={handleNext}>Next</button>
+
          }
          {showMore &&<h2 className="text-primary font-mono tracking-widest font-black">My_Circle</h2>}
          {
@@ -174,5 +189,5 @@ onClick={toggleShowMore}>{showMore ? 'HIDE Gallery':'SHOW Gallery'}</button>
 
 </div>
         </section>
-    )
+    );
 }

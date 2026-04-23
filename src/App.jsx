@@ -1,17 +1,81 @@
 import React from 'react';
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+import { useEffect, useState } from "react";
 import './App.css'
 import Hero from './Components/Hero.jsx'
 import Navbar from './Components/Navbar.jsx'
 import About from "./Components/About.jsx";
 import Projects from "./Components/Projects.jsx";
+import Skill from "./Components/Skill.jsx";
+import Contact from "./Components/Contact.jsx";
+import Footer from "./Components/Footer.jsx";
 export default function App() {
+    const [init, setInit] = useState(false);
 
+    useEffect(() => {
+        initParticlesEngine(async (engine) => {
+            await loadSlim(engine);
+        }).then(() => setInit(true));
+    }, []);
     return(
             <main className="min-h-screen bg-[#050505] text-text1">
-            <Navbar/>
+
+                {init && (
+                    <Particles
+                        id="tsparticles"
+                        options={{
+                            background: { color: { value: "transparent" } },
+                            fpsLimit: 60,
+                            particles: {
+                                number: { value: 200, density: { enable: true } },
+                                color: { value: "#FFB000" },
+                                opacity: { value: 0.2 },
+                                size: { value: { min: 3, max: 2 } },
+                                links: {
+                                    enable: true,
+                                    color: "#ffffff",
+                                    opacity: 0.09,
+                                    distance: 150,
+                                    width: 2,
+                                },
+                                move: {
+                                    enable: true,
+                                    speed: 0.6,
+                                    outModes: { default: "bounce" },
+                                },
+                            },
+                            interactivity: {
+                                events: {
+                                    onHover: { enable: true, mode: "grab" },
+                                },
+                                modes: {
+                                    grab: { distance: 140, links: { opacity: 0.3 } },
+                                },
+                            },
+                        }}
+                        style={{
+                            position: "fixed",
+                            inset: 0,
+                            zIndex: 0,
+                        }}
+                    />
+                )}
+
+
+
+                <div className="blob fixed w-96 h-96 rounded-full bg-primary/20 blur-3xl top-20 left-10 -z-10" />
+                <div className="blob fixed w-72 h-72 rounded-full bg-primary/15 blur-3xl bottom-20 right-10 -z-10" />
+                <div className="bg-ring" />
+                <div className="bg-ring" />
+                <div className="bg-ring" />
+                <Navbar/>
             <Hero/>
                 <About/>
                 <Projects />
+                <Skill/>
+                <Contact/>
+                <Footer/>
             </main>
 
     )
