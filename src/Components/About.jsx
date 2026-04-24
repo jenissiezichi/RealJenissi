@@ -124,7 +124,7 @@ opacity:0,
 
          })
      tl.from('.about',{
-        x:300,
+        y:100,
          opacity: 0,
          stagger: 0.2,
          ease: 'power2.out',
