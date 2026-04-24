@@ -6,27 +6,8 @@ import {ScrollTrigger} from "gsap/all"
 
 import Typed from "typed.js";
 
-gsap.registerPlugin(ScrollTrigger);
 export default function Contact() {
-    useGSAP(()=>{
-        const tl = gsap.timeline({
-            ScrollTrigger: {
-                trigger:'#contact',
-                start: 'top 60%',
-                end: 'bottom center',
-                ease:'bounce.out',
-                scrub:true,
-            }
-        })
-        tl.from('.chat',{
-            x:150,
-            y:100,
-            opacity: 0,
-            stagger: 0.2,
-            ease: 'bounce.out',
-        })
-    });
-
+   
     const [formData, setFormData] = useState({
         name: "",
         email: "",
