@@ -73,11 +73,11 @@ export default function Contact() {
                    <button onClick={handleSubmit} className="border border-primary rounded-2xl text-primary font-mono font-black tracking-widest text-xs
                     px-6 py-3 hover:bg-primary hover:text-[#050505] transition-all duration-300 cursor-pointer">SUBMIT🚀</button>
                   <div className="flex items-center gap-6 justify-center">
-                      <a href="" target="_blank" className="text-muted font-mono text-xs tracking-widests hover:text-primary
+                      <a href="https://wa.me/2347069632334" target="_blank" className="text-muted font-mono text-xs tracking-widests hover:text-primary
                        transition-colors uppercase">Whatsapp</a>
-                      <a href="" target="_blank" className="text-muted font-mono text-xs tracking-widests hover:text-primary
+                      <a href="https://www.linkedin.com/in/ezichijenissi" target="_blank" className="text-muted font-mono text-xs tracking-widests hover:text-primary
                        transition-colors uppercase">LinkedIN</a>
-                      <a href="" target="_blank" className="text-muted font-mono text-xs tracking-widests hover:text-primary
+                      <a href="https://www.instagram.com/the_realjeni?igsh=MXUzZGdxejdlanJqbg==" target="_blank" className="text-muted font-mono text-xs tracking-widests hover:text-primary
                        transition-colors uppercase">Instagram</a>
                   </div>
                    {
