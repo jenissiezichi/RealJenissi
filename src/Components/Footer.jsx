@@ -34,10 +34,10 @@ export default function Footer() {
                       <a href="" target="_blank" className="text-muted font-mono text-xs tracking-widests hover:text-primary
                        transition-colors uppercase">Github</a>
 
-                      <a href="" target="_blank" className="text-muted font-mono text-xs tracking-widests hover:text-primary
+                      <a href="https://jenissi.vercel.app/" target="_blank" className="text-muted font-mono text-xs tracking-widests hover:text-primary
                        transition-colors uppercase">Old Portfolio</a>
 
-                      <a href="" target="_blank" className="text-muted font-mono text-xs tracking-widests hover:text-primary
+                      <a href="mailto:eziokwubundujenissi@gmail.com" target="_blank" className="text-muted font-mono text-xs tracking-widests hover:text-primary
                        transition-colors uppercase">Email</a>
 
 
