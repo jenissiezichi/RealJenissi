@@ -35,7 +35,6 @@ export default function Skill() {
          }
      })
 tl.from('.fadeot',{
-    x:150,
     y:100,
     opacity: 0,
     stagger: 0.2,
