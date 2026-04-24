@@ -29,49 +29,37 @@ useEffect(() => {
 },[])
 
 useGSAP(()=>{
-    const tl =gsap.timeline();
-    tl.from(imgRef.current,{
-        x:-1000,
-        y: -500,
+    const tl = gsap.timeline();
+    tl.from(imgRef.current, {
         opacity: 0,
+        duration: 0.5,
+    })
+    .to(imgRef.current, {
+        y: -20,
+        duration: 0.4,
+        ease: 'power1.out',
+    })
+    .to(imgRef.current, {
+        y: 0,
+        x: 15,
+        duration: 0.4,
+        ease: 'power1.out',
+    })
+    .to(imgRef.current, {
+        x: -15,
+        duration: 0.4,
+        ease: 'power1.out',
+    })
+    .to(imgRef.current, {
+        x: 0,
+        duration: 0.3,
+    })
+    .to(imgRef.current, {
         rotation: 360,
-        ease: 'bounce.out',
-        duration: 2,
+        duration: 0.8,
+        ease: 'power2.inOut',
     })
-        .to(imgRef.current,{
-            x:2000,
-            y:500,
-            duration: 1,
-            ease: 'bounce.out',
-        })
-        .to(imgRef.current,{
-            x:0,
-            y:0,
-
-            duration: 0.5,
-        })
-    .to(imgRef.current,{
-        x:-2000,
-        y:500,
-        rotate:360,
-        duration: 1.5,
-        ease: 'bounce.out',
-
-    })
-        .to(imgRef.current,{
-            x:0,
-            y:0,
-            rotate:360,
-            duration: 1.5,
-            ease: 'bounce.out',
-        })
-        .to(imgRef.current,{
-         rotate:360 *3,
-         duration: 1,
-         ease: 'bounce.out',
-     })
-
-},[]);
+}, []);
     useGSAP(()=>{
 
  const paraSplit = new SplitText('#para',{type: 'lines'});
