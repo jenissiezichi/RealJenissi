@@ -23,7 +23,7 @@ const project= [
 
     },
     {
-        id: 'MODULE_03',
+        id: 'MODULE_02',
         name: 'CGPA Calculator',
         desc: 'Smart CGPA calculator for university students. Supports 5-point grading scale.',
         stack: ['HTML', 'Tailwind', 'JavaScript'],
@@ -32,13 +32,22 @@ const project= [
         link: '/Cgpa/index.html',
     },
     {
-        id: 'MODULE_05',
+        id: 'MODULE_03',
         name: 'Web Calculator',
         desc: 'A user friendly web calculator for proper mathematical calculations.',
         stack: ['HTML', 'Tailwind', 'JavaScript'],
         status: 'LIVE',
         img: three,
         link: "/calculator/index3.html",
+    },
+    {
+        id: 'MODULE_04',
+        name: 'CineVault',
+        desc: 'A Movie Vault For Trailers And Recommendation Using Api.',
+        stack: ['HTML', 'Tailwind', 'JavaScript','FastApi', 'GSAP'],
+        status: 'Under-Development',
+        img: three,
+        link: "https://jenissiezichi.github.io/CineVault/",
     },
 
 
