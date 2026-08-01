@@ -55,7 +55,7 @@ id: 'MODULE_05',
         desc: 'A Blockchain Powered smart campus platform built for Nigerian universities. It replaces slow, fragmented, paper-based administration — clearance, certificate verification, and campus safety — with a single trustless, tamper-proof system.',
         stack: ['React', 'Tailwind', 'Express', 'GSAP', 'Framer', 'Supabase'],
         status: 'Live',
-        img: three,
+        img: four,
         link: "https://campusflow-mmt9.onrender.com/",
 },
 
