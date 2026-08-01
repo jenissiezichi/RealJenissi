@@ -49,7 +49,15 @@ const project= [
         img: three,
         link: "https://jenissiezichi.github.io/CineVault/",
     },
-
+{
+id: 'MODULE_05',
+        name: 'CampusFlow,
+        desc: 'A Blockchain Powered smart campus platform built for Nigerian universities. It replaces slow, fragmented, paper-based administration — clearance, certificate verification, and campus safety — with a single trustless, tamper-proof system.,
+        stack: ['React', 'Tailwind', 'Express', 'GSAP', 'Framer', 'Supabase'],
+        status: 'Live',
+        img: three,
+        link: "https://campusflow-mmt9.onrender.com/",
+},
 
 ]
 
