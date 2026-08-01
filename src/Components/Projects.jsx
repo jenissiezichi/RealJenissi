@@ -6,7 +6,7 @@ import {ScrollTrigger} from "gsap/all"
 import one from './Por/dabwin.png'
 import two from './Por/cgpa.png'
 import three from './Por/cal.png'
-
+import four from './Por/Screenshot_20260801-070328_Chrome.jpg'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -51,8 +51,8 @@ const project= [
     },
 {
 id: 'MODULE_05',
-        name: 'CampusFlow,
-        desc: 'A Blockchain Powered smart campus platform built for Nigerian universities. It replaces slow, fragmented, paper-based administration — clearance, certificate verification, and campus safety — with a single trustless, tamper-proof system.,
+        name: 'CampusFlow',
+        desc: 'A Blockchain Powered smart campus platform built for Nigerian universities. It replaces slow, fragmented, paper-based administration — clearance, certificate verification, and campus safety — with a single trustless, tamper-proof system.',
         stack: ['React', 'Tailwind', 'Express', 'GSAP', 'Framer', 'Supabase'],
         status: 'Live',
         img: three,
