@@ -10,6 +10,7 @@ import four from './Por/Screenshot_20260801-070328_Chrome.jpg'
 
 gsap.registerPlugin(ScrollTrigger);
 
+
 const project= [
     {
         id:'MODULE_01',
